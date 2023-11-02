@@ -50,3 +50,37 @@
  8)Close both the source and destination files using the close() system call.
 
  9)Display a success message indicating that the file was copied successfully.
+
+ 3-> CPU SCHEDULING PROGRAM USING FCFS:-
+
+ALGORITHM STEPS:-
+
+1)Define a structure Process to represent a process with attributes like process_id, arrival_time, burst_time, completion_time, turnaround_time, and waiting_time.
+
+2)Prompt the user to enter the number of processes (n).
+
+3)Create an array of Process structures to store process information for n processes.
+
+4)For each process from 1 to n:
+  a.Set process_id for the process.
+  b.Set arrival_time to 0 (since all processes start at time 0).
+  c.Prompt the user to enter the burst_time for the process.
+
+5)Calculate the completion, turnaround, and waiting times for each process:
+  a.Initialize a variable total_waiting_time to 0.
+  b.For each process from 1 to n:
+      i.If it's the first process (i == 0), set completion_time to burst_time.
+      ii.Otherwise, set completion_time to the sum of the previous process's completion_time and the current process's burst_time.
+      iii.Calculate turnaround_time as completion_time - arrival_time.
+      iv.Calculate waiting_time as turnaround_time - burst_time.
+      v.Add the waiting_time to total_waiting_time.
+
+6)Calculate the average waiting time as avg_waiting_time = total_waiting_time / n.
+
+7)Print the table with columns: "Process," "Arrival Time," "Burst Time," "Completion Time," "Turnaround Time," and "Waiting Time."
+
+8)For each process, print its details.
+
+9)Display the average waiting time.
+
+10)End
