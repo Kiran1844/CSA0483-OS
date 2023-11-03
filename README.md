@@ -25,6 +25,7 @@
  8)Print the process identifiers and any other information you want to display.
  
  9)End the program.
+
    
 #2->COPY THE CONTENT OF ONE FILE TO OTHER:-
 
@@ -50,6 +51,7 @@
  8)Close both the source and destination files using the close() system call.
 
  9)Display a success message indicating that the file was copied successfully.
+
 
  #3-> CPU SCHEDULING PROGRAM USING FCFS:-
 
@@ -94,6 +96,7 @@ ALGORITHM STEPS:-
 9)Display the average waiting time.
 
 10)End
+
 
 #4-> WAITING PROCESS WITH THE SMALLEST EXECUTION TIME TO EXECUTE NEXT:-
 
