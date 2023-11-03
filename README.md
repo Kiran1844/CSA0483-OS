@@ -375,3 +375,41 @@ ALGORITHM STEPS:-
   7)Remove the message queue using msgctl.
   
   8)End.
+
+
+  #11-> CONCEPT OF MULTITHREADING:-
+
+  ALGORITHM STEPS:-
+
+ =>Main Program:
+
+   1)Start
+   
+   2)Define constants NUM_THREADS (number of threads) and MAX_COUNT (maximum count per thread).  
+   
+   3)Initialize a global integer variable counter to 0 to serve as a shared counter.
+   
+   4)Create a mutex using pthread_mutex_t mutex to protect the critical section.
+   
+   5)Create an array of pthread_t objects named threads.
+   
+   6)Create NUM_THREADS threads, each running the thread_function.
+   
+   7)Wait for all threads to complete using pthread_join.
+   
+   8)Display the final value of the shared counter.
+   
+   9)End.
+=>Thread Function (thread_function):
+
+ 1)Start
+ 
+ 2)For each thread, execute the following loop MAX_COUNT times:
+
+   a. Lock the mutex using pthread_mutex_lock to enter the critical section.
+   
+   b. Increment the counter by 1.
+   
+   c. Unlock the mutex using pthread_mutex_unlock to exit the critical section.
+
+ 3)End.
