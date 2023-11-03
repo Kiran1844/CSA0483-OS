@@ -336,3 +336,42 @@ ALGORITHM STEPS:-
 8)Remove the shared memory segment using shmctl.
 
 9)End.
+
+
+#10-> INTER-PROCESS COMMUNICATION USING MESSAGE QUEUE:-
+
+ALGORITHM STEPS:-
+
+=>Sender (producer.c):
+
+  1)Start
+  
+  2)Generate a unique key for the message queue using ftok.
+  
+  3)Create or get a message queue using msgget.
+  
+  4)Define a message structure with a message type (greater than 0) and a message text.
+  
+  5)Prompt the user to enter a message and store it in the message structure.
+  
+  6)Send the message to the message queue using msgsnd.
+  
+  7)End.
+
+=>Receiver (consumer.c):
+
+  1)Start
+
+  2)Generate the same unique key for the message queue using ftok.
+  
+  3)Get the message queue using msgget.
+  
+  4)Define a message structure with a message type (greater than 0) and a message text.
+  
+  5)Receive a message from the message queue using msgrcv.
+  
+  6)Display the received message from the message structure.
+  
+  7)Remove the message queue using msgctl.
+  
+  8)End.
