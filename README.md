@@ -472,3 +472,40 @@ k. Put down left fork: Signal the forks semaphore for the left fork.
 l. Output that the philosopher put down the left fork.
 
 5)End
+
+
+#13-> IMPLEMENTATION OF VARIOUS MEMORY ALLOCATION STRATEGIES:-
+
+ALGORITHM STEPS:-
+
+1) Start the program.
+
+2) Allocate memory statically:
+
+   a. Declare a global variable (e.g., globalVar) with a fixed size and value. This demonstrates static memory allocation.
+
+3) Define a function stackAllocationExample():
+  
+   a. Inside the function, declare a local variable (e.g., stackVar) with a fixed size and value.
+
+   b. Print the value of stackVar, which demonstrates stack allocation.
+
+4) Define a function heapAllocationExample():
+
+   a. Inside the function, declare a pointer to an integer (e.g., heapVar).
+
+   b. Allocate memory for heapVar on the heap using malloc.
+
+   c. Set a value for heapVar.
+
+   d. Print the value of heapVar, which demonstrates heap allocation.
+
+   e. Release the allocated memory using free.
+
+5) In the main function:
+ 
+   a. Call the stackAllocationExample function.
+ 
+   b. Call the heapAllocationExample function.
+
+6)End the program.
