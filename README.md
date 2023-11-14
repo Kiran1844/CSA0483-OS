@@ -595,7 +595,7 @@ ALGORITHM STEPS:-
    
     iii. Display the list of files to the user.
 
-3. In the main function:
+3) In the main function:
 
     a. Create an infinite loop to display a menu to the user:
 
@@ -623,5 +623,90 @@ ALGORITHM STEPS:-
        
          - If the choice is invalid, display an error message and return to the menu.
 
-5. End the program.
+5) End the program.
 
+
+
+#16->IMPLEMENTING RANDOM ACCESS FILES FOR PROCESSING EMPLOYEE DETAILS:-
+
+ALGORITHM STEPS:-
+
+1) Open or Create File:
+
+      Try to open the file in read and write mode (r+).
+
+      If the file does not exist, create a new one in read and write mode (w+).
+
+2) Menu Loop:
+
+    Display a menu with options:
+
+     -Add Employee
+
+     -Display Employees
+  
+     -Update Employee
+
+     -Delete Employee
+
+     -Exit
+
+3) User Input:
+
+   -Take the user's choice as input.
+
+4) Switch on User's Choice:
+
+   -For each option, perform the following:
+
+   -Add Employee (Option 1):
+
+   -Take input for Employee ID, Name, and Salary.
+
+   -Use fseek to move to the position corresponding to the given Employee ID.
+
+   -Write the employee data using fwrite.
+
+   -Display Employees (Option 2):
+
+   -Use rewind to move the file position indicator to the beginning.
+
+   -Read and display each employee's details using fread.
+
+Update Employee (Option 3):
+
+   -Take input for the Employee ID to update.
+   
+   -Use fseek to move to the position corresponding to the given Employee ID.
+   
+   -Read the existing employee data using fread.
+   
+   -Take input for the new Name and Salary.
+   
+   -Use fseek again to move to the position corresponding to the given Employee ID.
+   
+   -Write the updated employee data using fwrite.
+   
+ Delete Employee (Option 4):
+
+   -Take input for the Employee ID to delete.
+   
+   -Use fseek to move to the position corresponding to the given Employee ID.
+   
+   -Read the existing employee data using fread.
+   
+   -Clear the record by setting the Employee ID to 0.
+   
+   -Use fseek again to move to the position corresponding to the given Employee ID.
+Write the cleared employee data using fwrite.
+    
+   -Exit (Option 0):
+
+5) Display an exit message and break out of the loop.
+
+   Invalid Choice:
+
+      -Display a message for an invalid choice.
+6) Close File:
+
+     -Close the file using fclose.
